@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+
+
+@import "normalize";
+@import "layout";
+
+
+$primary-color: #fff;
+$text-color: #b7bacd;
+$tab-title-color: #fbfbfb;
+$bg-color: #212534;
+$bg-tab-color: #2b3040;
+$font: 400 14px/1.2 Lato, sans-serif;
+
+body{
+	background: url(../img/BG.jpg) 50%;
+	background-size: cover;
+	font: $font;
+
+}
+
+
+/* Layout */
+.ba-container{
+	padding-left: 20px;
+	padding-right: 20px;
+	max-width: 640px;
+}
+
+
+
+/* Typography */
+a,
+input[type="submit"],
+input[type="button"],
+button{
+	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button{
+	display: inline-block;
+	background:  #13e28d;
+	padding: 20px 40px;
+	color: #FFF;
+	border: transparent;
+
+}
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+.ba-button:hover{
+	color: #252832;
+	outline: none;
+
+}
+button:focus,
+.ba-button:focus{
+	color: #252832;
+	outline: none;
+
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+
+	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+
+}
+textarea {
+
+}
+
+.ba-product-card {
+	background: #212534;
+	color: $text-color;
+	margin-top: 155px;
+
+}
+
+.ba-card-tabs {
+	background: $bg-tab-color;
+	color: $text-color;
+	padding: 20px 0 0;
+}
+
+.ba-tab-list {
+	list-style: none;
+	display: flex;
+
+	&__item {
+		flex-grow: 3;
+		text-align: center;
+		position: relative;
+
+		a {
+			display: block;
+			text-decoration: none;
+			color: currentColor;
+		}
+
+		h3 {
+			font-size: 16px;
+			margin: 3px 0 30px;
+		}
+
+		svg {
+			fill: currentColor;
+		}
+	}
+}
+
+.active{
+	color: #fff;
+	&:hover{
+		color: #fff;
+	}
+	&:after{
+		position: absolute;
+		display: block;
+		content: "";
+		width: 130px;
+		height: 2px;
+		background: currentColor;
+		bottom: 0px;
+		left: 30px;
+	}
+}
+
+.ba-product-content {
+	padding: 42px 35px 40px 45px;
+}
+
+.ba-rating{
+	display: block;
+	margin-top: -13px;
+	padding: 0;
+
+}
+.ba-star input{
+	display: none;
+}
+.ba-rate__text{
+	font-size:140%;
+	font-style: normal;
+	cursor: pointer;
+	display: inline-block;
+	transition: color .2s;
+	width: 5px;
+	height: 5px;
+	padding: 0;
+}
+.ba-rate__text:hover{
+	color: #f7c10f;
+}
+:checked + .ba-rate__text{
+	color: #f7c10f;
+}
+.ba-product-title {
+	font-size: 32px;
+	color: #FFF;
+	margin: 11px 0 0;
+	letter-spacing: 0.001em;
+}
+.ba-product-info {
+	color: $tab-title-color;
+	margin: 6px 0 0;
+}
+
+.ba-product-text {
+	margin: 39px 0 62px;
+	line-height: 1.5;
+
+}
+
+.ba-product-image {
+	text-align: center;
+}
+
+.ba-rating {
+	padding-right: 30px;
+}
+
+.ba-star + .ba-star {
+	margin-left: 20px;
+}
+
+.ba-rate__text {
+	font-size: 32px;
+}
+
+.ba-price {
+	display: inline-block;
+	span {
+		color: #f7c10f;
+	}
+
+	p {
+		font-size: 32px;
+		margin: 0;
+	}
+}
+
+.ba-buy-button {
+	position: relative;
+	right: -45px;
+	top: -14px;
+}
